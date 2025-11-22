@@ -2,7 +2,7 @@
 // AYARLAR
 // ==========================================
 // 3. Adımda kopyaladığın ID'yi tırnakların içine yapıştır:
-const SHEET_ID = '1S4486Cil4ZG2bN8D6HJInIMy9kpzGu3h4La7X2GuyB8'; 
+const SHEET_ID = '1QMVfzo7DP8MZTkEuC1U6wg89q9y_CD74tt66AO7RwG8'; 
 
 // ==========================================
 // KODLAR (Buraya dokunmana gerek yok)
