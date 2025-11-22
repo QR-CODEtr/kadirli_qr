@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Sayfanın tarayıcı sekmesinde görünecek başlığı -->
     <title>Kadirli Sucuk Ekmek - Menü</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts'tan şık bir font ekleyelim (isteğe bağlı) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Teko:wght@500&display=swap" rel="stylesheet">
@@ -14,18 +13,43 @@
 <body>
 
     <header class="site-header">
-        <!-- Restoranın logosunu buraya ekleyebilirsin -->
-        <!-- <img src="logo.png" alt="Adil Bey Logo" class="logo"> -->
-        <h1 class="restaurant-title">Kadirli Sucuk Ekmek</h1>
-        <p class="menu-subtitle">Menümüz</p>
+        <!-- 1. EN ÜSTTEKİ RESİM (LOGO) -->
+        <div class="logo-container">
+            <img src="logo.png" alt="Kadirli Logo" class="top-logo">
+        </div>
+
+        <!-- 2. ALT SATIR (SOL RESİM - BAŞLIK - SAĞ RESİM) -->
+        <div class="header-row">
+            
+            <!-- Sol Resim (Sucuk) -->
+            <div class="side-image-box left-box">
+                <img src="sucuk.png" alt="Sucuk Ekmek" class="side-img">
+            </div>
+
+            <!-- Ortadaki Başlık -->
+            <div class="title-box">
+                <h1 class="restaurant-title">Kadirli Sucuk Ekmek</h1>
+                <p class="menu-subtitle">MENÜMÜZ</p>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Sağ Resim (Şalgam) -->
+            <div class="side-image-box right-box">
+                <img src="salgam.png" alt="Şalgam" class="side-img">
+            </div>
+
+        </div>
     </header>
 
     <main id="menu-container">
-        <!-- Menü içeriği JavaScript ile buraya eklenecek -->
+        <!-- Menü içeriği JavaScript ile buraya yüklenecek -->
     </main>
 
     <footer class="site-footer">
         <p>Kadirli Sucuk Ekmek &copy; 2025</p>
+        <div class="iletisim-info">
+            <p>İLETİŞİM: 0312 230 12 60</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

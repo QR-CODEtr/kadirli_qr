@@ -1,77 +1,151 @@
-/* Genel Ayarlar */
+/* ========================
+   GENEL AYARLAR
+   ======================== */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #eef2f3; /* Hafif gri arka plan */
     color: #333;
 }
 
-/* Header Alanı (Başlık) */
+/* ========================
+   HEADER (BAŞLIK) TASARIMI
+   ======================== */
 .site-header {
-    text-align: center;
-    padding: 25px 15px;
-    background-color: #2c3e50;
-    color: white;
+    background-color: #fdfdfd; /* Beyazımsı zemin */
+    padding: 15px 10px 30px 10px;
+    border-bottom: 5px solid #c0392b; /* Altına kırmızı çizgi */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
 }
 
-.logo {
-    max-width: 100px;
-    margin-bottom: 10px;
+/* 1. Üst Logo Alanı */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -20px; /* Alttaki kısımla biraz iç içe geçsin */
+    position: relative;
+    z-index: 10;
+}
+
+.top-logo {
+    width: 140px; /* Logonun boyutu */
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+
+.top-logo:hover {
+    transform: scale(1.05);
+}
+
+/* 2. Alt Satır (Resim-Yazı-Resim) */
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+/* Yan Resim Kutuları */
+.side-image-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.side-img {
+    width: 130px; /* Yan resimlerin boyutu */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    object-fit: cover;
+}
+
+/* Ortadaki Yazı Alanı */
+.title-box {
+    flex: 2; /* Yazı alanı daha geniş */
+    text-align: center;
+    z-index: 5;
+    padding: 0 15px;
 }
 
 .restaurant-title {
     font-family: 'Teko', sans-serif;
-    font-size: 2.8em;
+    font-size: 3.5em;
+    color: #c0392b; /* Broşürdeki kırmızı */
     margin: 0;
-    letter-spacing: 1.5px;
+    line-height: 0.9;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px #333;
 }
 
 .menu-subtitle {
-    font-size: 1.2em;
-    margin: 5px 0 0 0;
-    color: #bdc3c7;
-    font-weight: 400;
+    font-size: 1.4em;
+    color: #333;
+    margin: 5px 0;
+    font-weight: bold;
+    letter-spacing: 3px;
 }
 
-/* Menü Konteyneri */
+.divider {
+    width: 50px;
+    height: 3px;
+    background-color: #c0392b;
+    margin: 10px auto;
+}
+
+/* ========================
+   MENÜ İÇERİĞİ
+   ======================== */
 #menu-container {
-    padding: 20px 15px;
+    padding: 30px 15px;
     max-width: 800px;
     margin: 0 auto;
 }
 
 .kategori {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 .kategori-baslik {
     font-family: 'Teko', sans-serif;
-    font-size: 2.2em;
+    font-size: 2.4em;
     color: #c0392b;
-    border-bottom: 3px solid #e74c3c;
-    padding-bottom: 8px;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 5px;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-/* ÜRÜN KARTI TASARIMI (En Önemli Kısım) */
+/* Ürün Kartı */
 .urun {
     display: flex;
     align-items: center;
     background-color: white;
     padding: 15px;
     margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.urun:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .urun-resim {
-    width: 85px;
-    height: 85px;
+    width: 90px;
+    height: 90px;
     border-radius: 8px;
     object-fit: cover;
     margin-right: 15px;
     flex-shrink: 0;
+    border: 1px solid #eee;
 }
 
 .urun-bilgi {
@@ -83,38 +157,93 @@ body {
 .urun-ust-kisim {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-start;
     width: 100%;
 }
 
 .urun-ad {
-    font-size: 1.2em;
+    font-size: 1.25em;
     font-weight: 700;
     margin: 0;
-    color: #34495e;
-}
-
-.urun-aciklama {
-    font-size: 0.9em;
-    color: #7f8c8d;
-    margin-top: 5px;
-    line-height: 1.4;
-    padding-right: 10px; /* Fiyat ile arasına boşluk koyar */
+    color: #2c3e50;
 }
 
 .urun-fiyat {
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: 700;
     color: #c0392b;
     white-space: nowrap;
     padding-left: 10px;
+    font-family: 'Teko', sans-serif;
 }
 
-/* Footer Alanı */
+.urun-aciklama {
+    font-size: 0.95em;
+    color: #7f8c8d;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+/* ========================
+   FOOTER
+   ======================== */
 .site-footer {
     text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-    color: #777;
-    background-color: #e9e9e9;
+    padding: 30px 20px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    margin-top: 40px;
+}
+
+.iletisim-info {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
+/* ========================
+   MOBİL UYUMLULUK
+   ======================== */
+@media (max-width: 600px) {
+    .top-logo {
+        width: 100px;
+    }
+
+    /* Mobilde yan resimleri gizleyelim veya küçültelim 
+       (Yazının okunması için gizlemek veya arkaya almak daha iyi) */
+    .header-row {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .side-image-box {
+        position: absolute;
+        top: 0;
+        opacity: 0.15; /* Çok silik görünsün */
+        z-index: 0;
+    }
+
+    .left-box { left: -20px; }
+    .right-box { right: -20px; }
+
+    .restaurant-title {
+        font-size: 2.8em;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .menu-subtitle {
+        position: relative;
+        z-index: 2;
+    }
+
+    .urun-resim {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .urun-ad {
+        font-size: 1.1em;
+    }
 }
