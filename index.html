@@ -2,6 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <!-- Bu meta etiketi mobil uyumluluk için çok kritiktir -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kadirli Sucuk Ekmek</title>
     <link rel="stylesheet" href="style.css">
@@ -12,43 +13,41 @@
 <body>
 
     <header class="mobil-header">
-        <!-- 1. En Üst: LOGO -->
-        <div class="logo-bolumu">
-            <img src="logo.png" alt="Logo" class="ana-logo">
+        <!-- EN ÜST: LOGO -->
+        <div class="logo-alani">
+            <img src="logo.png" alt="Kadirli Logo" class="ana-logo">
         </div>
 
-        <!-- 2. Orta Kısım: Sucuk - Başlık - Şalgam -->
-        <div class="hero-bolumu">
+        <!-- ALT KISIM: TEK SATIR (SOL RESİM - YAZI - SAĞ RESİM) -->
+        <div class="hero-satir">
             
-            <!-- Sol Resim -->
-            <div class="yan-resim-kutu">
+            <!-- Sol Resim Kutusu (%25 Genişlik) -->
+            <div class="yan-kutu">
                 <img src="sucuk.png" alt="Sucuk" class="yan-img">
             </div>
 
-            <!-- Orta Yazı -->
-            <div class="baslik-kutu">
-                <h1 class="firma-adi">Kadirli<br>Sucuk Ekmek</h1>
-                <span class="menu-etiket">MENÜMÜZ</span>
+            <!-- Orta Yazı Kutusu (%50 Genişlik) -->
+            <div class="orta-kutu">
+                <h1 class="baslik-text">Kadirli<br>Sucuk Ekmek</h1>
+                <div class="etiket">MENÜMÜZ</div>
             </div>
 
-            <!-- Sağ Resim -->
-            <div class="yan-resim-kutu">
+            <!-- Sağ Resim Kutusu (%25 Genişlik) -->
+            <div class="yan-kutu">
                 <img src="salgam.png" alt="Şalgam" class="yan-img">
             </div>
 
         </div>
         
-        <!-- Kırmızı Çizgi Süsü -->
-        <div class="cizgi-sus"></div>
+        <div class="kirmizi-cizgi"></div>
     </header>
 
     <main id="menu-container">
-        <!-- Menü JS ile gelecek -->
+        <!-- JavaScript burayı dolduracak -->
     </main>
 
     <footer class="mobil-footer">
-        <p>Afiyet Olsun!</p>
-        <a href="tel:03122301260" class="arama-butonu">📞 SİPARİŞ VER</a>
+        <a href="tel:03122301260" class="siparis-btn">📞 SİPARİŞ İÇİN ARA</a>
     </footer>
 
     <script src="script.js"></script>
