@@ -2,54 +2,53 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kadirli Sucuk Ekmek - Menü</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kadirli Sucuk Ekmek</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Teko:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Teko:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="site-header">
-        <!-- 1. EN ÜSTTEKİ RESİM (LOGO) -->
-        <div class="logo-container">
-            <img src="logo.png" alt="Kadirli Logo" class="top-logo">
+    <header class="mobil-header">
+        <!-- 1. En Üst: LOGO -->
+        <div class="logo-bolumu">
+            <img src="logo.png" alt="Logo" class="ana-logo">
         </div>
 
-        <!-- 2. ALT SATIR (SOL RESİM - BAŞLIK - SAĞ RESİM) -->
-        <div class="header-row">
+        <!-- 2. Orta Kısım: Sucuk - Başlık - Şalgam -->
+        <div class="hero-bolumu">
             
-            <!-- Sol Resim (Sucuk) -->
-            <div class="side-image-box left-box">
-                <img src="sucuk.png" alt="Sucuk Ekmek" class="side-img">
+            <!-- Sol Resim -->
+            <div class="yan-resim-kutu">
+                <img src="sucuk.png" alt="Sucuk" class="yan-img">
             </div>
 
-            <!-- Ortadaki Başlık -->
-            <div class="title-box">
-                <h1 class="restaurant-title">Kadirli Sucuk Ekmek</h1>
-                <p class="menu-subtitle">MENÜMÜZ</p>
-                <div class="divider"></div>
+            <!-- Orta Yazı -->
+            <div class="baslik-kutu">
+                <h1 class="firma-adi">Kadirli<br>Sucuk Ekmek</h1>
+                <span class="menu-etiket">MENÜMÜZ</span>
             </div>
 
-            <!-- Sağ Resim (Şalgam) -->
-            <div class="side-image-box right-box">
-                <img src="salgam.png" alt="Şalgam" class="side-img">
+            <!-- Sağ Resim -->
+            <div class="yan-resim-kutu">
+                <img src="salgam.png" alt="Şalgam" class="yan-img">
             </div>
 
         </div>
+        
+        <!-- Kırmızı Çizgi Süsü -->
+        <div class="cizgi-sus"></div>
     </header>
 
     <main id="menu-container">
-        <!-- Menü içeriği JavaScript ile buraya yüklenecek -->
+        <!-- Menü JS ile gelecek -->
     </main>
 
-    <footer class="site-footer">
-        <p>Kadirli Sucuk Ekmek &copy; 2025</p>
-        <div class="iletisim-info">
-            <p>İLETİŞİM: 0312 230 12 60</p>
-        </div>
+    <footer class="mobil-footer">
+        <p>Afiyet Olsun!</p>
+        <a href="tel:03122301260" class="arama-butonu">📞 SİPARİŞ VER</a>
     </footer>
 
     <script src="script.js"></script>
